@@ -3,6 +3,8 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { MockProvider } from '@/src/provider/MockProvider'
 import QueryProvider from '@/src/provider/QueryProvider'
+import Header from '@/src/components/common/header/Header'
+import Gnb from '@/src/components/common/gnb/Gnb'
 
 const pretendard = localFont({
   src: '../src/asset/fonts/PretendardVariable.woff2',
@@ -25,8 +27,13 @@ export default function RootLayout({
     <html lang="ko" className={`${pretendard.variable}`}>
       <QueryProvider>
         <body className={pretendard.className}>
-          {' '}
-          <MockProvider>{children}</MockProvider>
+          <MockProvider>
+            <Gnb />
+            <header className="max-w-[1600px] mx-auto">
+              <Header />
+            </header>
+            {children}
+          </MockProvider>
         </body>
       </QueryProvider>
     </html>
