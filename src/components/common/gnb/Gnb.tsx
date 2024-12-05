@@ -11,7 +11,7 @@ const Gnb = () => {
 
   return (
     <div className=" border-b border-gray-200 shadow-sm ">
-      <div className="max-w-[1600px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1400px] w-full mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href={'/'} className="border-x-2 border-gray-200 p-3">
             <RiHome6Line size={24} className="text-gray-700" />

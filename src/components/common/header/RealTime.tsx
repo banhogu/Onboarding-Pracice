@@ -52,13 +52,16 @@ const RealTime = () => {
       </Swiper>
 
       {isMouseOn && data && (
-        <div className="absolute top-0 left-0 bg-white w-full z-50 border border-gray-500 rounded-sm">
+        <div className="absolute top-0 left-0 bg-white w-full z-50 border border-gray-300 rounded-sm">
           <div className="p-[6px] text-[14px] font-semibold bg-zinc-100">
             ▪️ 실시간 PC견적
           </div>
           <div className="flex flex-col gap-2 p-3">
             {data.slice(0, 10).map((item, i) => (
-              <div className="flex items-center text-sm font-medium justify-between">
+              <div
+                key={i}
+                className="flex items-center text-sm font-medium justify-between"
+              >
                 <div className="flex gap-2">
                   <div>
                     {'['} {format(new Date(item.time), 'HH:mm')} {']'}
