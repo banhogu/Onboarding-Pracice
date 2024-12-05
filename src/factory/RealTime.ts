@@ -4,9 +4,7 @@ import { realTimeType } from '../models/realTime.type'
 
 const fetchRealTime = async () => {
   try {
-    const { data } = await axios.get(
-      `https://onboarding-pracice.vercel.app/realtime`,
-    )
+    const { data } = await axios.get(`http://localhost:3000/realtime`)
     return data.data
   } catch (e) {
     throw new Error('Failed to fetch main product data')

@@ -1,21 +1,27 @@
 'use client'
 import { getRealTime } from '@/src/factory/RealTime'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import React from 'react'
+import React, { useState } from 'react'
 import { Autoplay } from 'swiper/modules'
+import RealTimeItem from './RealTimeItem'
+import { format } from 'date-fns'
 
 import 'swiper/css'
-import RealTimeItem from './RealTimeItem'
 
 const RealTime = () => {
   const { data, isLoading } = getRealTime()
+  const [isMouseOn, setIsMouseOn] = useState(false)
 
   if (isLoading) {
-    return <div className="w-[150px]" />
+    return <div className="w-[550px]" />
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div
+      onMouseEnter={() => setIsMouseOn(true)}
+      onMouseLeave={() => setIsMouseOn(false)}
+      className="flex items-center gap-2 relative"
+    >
       <div className="text-[14px] font-semibold mr-6">▪️ 실시간 PC견적</div>
       <Swiper
         direction={'vertical'}
@@ -44,6 +50,30 @@ const RealTime = () => {
             })
           : 'No data available'}
       </Swiper>
+
+      {isMouseOn && data && (
+        <div className="absolute top-0 left-0 bg-white w-full z-50 border border-gray-500 rounded-sm">
+          <div className="p-[6px] text-[14px] font-semibold bg-zinc-100">
+            ▪️ 실시간 PC견적
+          </div>
+          <div className="flex flex-col gap-2 p-3">
+            {data.slice(0, 10).map((item, i) => (
+              <div className="flex items-center text-sm font-medium justify-between">
+                <div className="flex gap-2">
+                  <div>
+                    {'['} {format(new Date(item.time), 'HH:mm')} {']'}
+                  </div>
+                  <div>{item.title}</div>
+                </div>
+
+                <div className="font-bold">
+                  {item.price?.toLocaleString()}원
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
