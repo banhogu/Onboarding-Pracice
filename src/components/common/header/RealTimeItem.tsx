@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 
 const RealTimeItem = ({ time, title, price }: realTimeType) => {
   return (
-    <div className="flex items-center text-sm gap-2 font-medium">
+    <div className="flex items-center text-[13px] gap-2 font-medium">
       <div>
         {'['} {format(new Date(time), 'HH:mm')} {']'}
       </div>

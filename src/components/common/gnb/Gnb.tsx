@@ -11,12 +11,12 @@ const Gnb = () => {
 
   return (
     <div className=" border-b border-gray-200 shadow-sm ">
-      <div className="max-w-[1400px] w-full mx-auto flex items-center justify-between">
+      <div className="max-w-[1200px] w-full mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href={'/'} className="border-x-2 border-gray-200 p-3">
-            <RiHome6Line size={24} className="text-gray-700" />
+            <RiHome6Line size={20} className="text-gray-700" />
           </Link>
-          <div className="flex gap-6 text-gray-700 font-medium text-[15px]">
+          <div className="flex gap-6 text-gray-700 font-medium text-[14px]">
             <Link
               href={'https://pc26.danawa.com/bbs/?logger_kw=shop_top_pc26'}
               className="hover:underline hover:text-black "
@@ -62,7 +62,7 @@ const Gnb = () => {
               </div>
               {isMouseOn ? <IoIosArrowUp /> : <IoIosArrowDown />}
               {isMouseOn && (
-                <div className="text-[14px] gap-2 absolute top-6 left-0 flex flex-col bg-white border border-gray-400 p-3 rounded-lg shadow-sm">
+                <div className="text-[13px] gap-2 absolute top-6 left-0 flex flex-col bg-white border border-gray-400 p-3 rounded-lg shadow-sm">
                   <Link href={'/'} className="hover:underline hover:text-black">
                     로그인
                   </Link>
@@ -83,7 +83,7 @@ const Gnb = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-6 text-gray-700 font-medium text-[15px] mr-3">
+        <div className="flex gap-6 text-gray-700 font-medium text-[14px] mr-3">
           <Link
             href={'https://www.danawa.com/?logger_kw=shop_top_danawa'}
             className="hover:underline hover:text-black"

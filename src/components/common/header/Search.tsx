@@ -9,14 +9,14 @@ const Search = () => {
     <div className="border border-purple-500 px-6 py-4 rounded-full  flex items-center justify-between ">
       <input
         type="text"
-        className="w-full font-medium text-lg outline-none"
+        className="w-full font-medium text-[16px] outline-none"
         placeholder="검색어를 입력해주세요."
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onFocus={() => setValue('')}
       />
       <div className="">
-        <FiSearch size={32} color="black" className="cursor-pointer" />
+        <FiSearch size={26} color="black" className="cursor-pointer" />
       </div>
     </div>
   )

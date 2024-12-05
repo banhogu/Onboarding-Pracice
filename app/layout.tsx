@@ -29,7 +29,7 @@ export default function RootLayout({
         <body className={pretendard.className}>
           <MockProvider>
             <Gnb />
-            <header className="max-w-[1400px] w-full mx-auto">
+            <header className="max-w-[1200px] w-full mx-auto">
               <Header />
             </header>
             {children}

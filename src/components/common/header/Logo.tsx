@@ -7,8 +7,8 @@ const Logo = () => {
     <Link href={'/'}>
       <Image
         src={'https://img.danawa.com/new/shop_danawa/img/img_logo_main.png'}
-        width={250}
-        height={250}
+        width={200}
+        height={200}
         alt="logo"
         className="cursor-pointer"
       />

@@ -22,7 +22,7 @@ const RealTime = () => {
       onMouseLeave={() => setIsMouseOn(false)}
       className="flex items-center gap-2 relative"
     >
-      <div className="text-[14px] font-semibold mr-6">▪️ 실시간 PC견적</div>
+      <div className="text-[13px] font-semibold mr-6">▪️ 실시간 PC견적</div>
       <Swiper
         direction={'vertical'}
         autoplay={{
@@ -53,14 +53,14 @@ const RealTime = () => {
 
       {isMouseOn && data && (
         <div className="absolute top-0 left-0 bg-white w-full z-50 border border-gray-300 rounded-sm">
-          <div className="p-[6px] text-[14px] font-semibold bg-zinc-100">
+          <div className="p-[6px] text-[13px] font-semibold bg-zinc-100">
             ▪️ 실시간 PC견적
           </div>
           <div className="flex flex-col gap-2 p-3">
             {data.slice(0, 10).map((item, i) => (
               <div
                 key={i}
-                className="flex items-center text-sm font-medium justify-between"
+                className="flex items-center text-[13px] font-medium justify-between"
               >
                 <div className="flex gap-2">
                   <div>
