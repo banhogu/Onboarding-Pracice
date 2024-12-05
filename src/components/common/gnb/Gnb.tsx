@@ -17,17 +17,35 @@ const Gnb = () => {
             <RiHome6Line size={24} className="text-gray-700" />
           </Link>
           <div className="flex gap-6 text-gray-700 font-medium text-[15px]">
-            <Link href={'/'} className="hover:underline hover:text-black ">
+            <Link
+              href={'https://pc26.danawa.com/bbs/?logger_kw=shop_top_pc26'}
+              className="hover:underline hover:text-black "
+            >
               PC26
             </Link>
 
-            <Link href={'/'} className="hover:underline hover:text-black ">
+            <Link
+              href={
+                'https://shop.danawa.com/ssancom/?logger_kw=shop_top_ssancom'
+              }
+              className="hover:underline hover:text-black "
+            >
               싼컴
             </Link>
-            <Link href={'/'} className="hover:underline hover:text-black ">
+            <Link
+              href={
+                'https://pc26.danawa.com/bbs/?controller=board&methods=getBoardList&boardSeq=194&logger_kw=shop_top_counseling#1'
+              }
+              className="hover:underline hover:text-black "
+            >
               PC구매상담
             </Link>
-            <Link href={'/'} className="hover:underline hover:text-black ">
+            <Link
+              href={
+                'https://shop.danawa.com/shopmain/?controller=serviceMain&methods=pcbangConsultForm&consultType=CONSULT_TYPE_BUSINESS&categorySeq=9250'
+              }
+              className="hover:underline hover:text-black "
+            >
               기업구매상담
             </Link>
             <div
@@ -66,19 +84,42 @@ const Gnb = () => {
           </div>
         </div>
         <div className="flex gap-6 text-gray-700 font-medium text-[15px] mr-3">
-          <Link href={'/'} className="hover:underline hover:text-black">
+          <Link
+            href={'https://www.danawa.com/?logger_kw=shop_top_danawa'}
+            className="hover:underline hover:text-black"
+          >
             다나와
           </Link>
-          <Link href={'/'} className="hover:underline hover:text-black">
+          <Link
+            href={
+              'https://www.enuri.com/?utm_source=onsite&utm_medium=top_gnb&utm_campaign=shopdanawa'
+            }
+            className="hover:underline hover:text-black"
+          >
             에누리
           </Link>
-          <Link href={'/'} className="hover:underline hover:text-black">
+          <Link
+            href={
+              'https://post.malltail.com/?utm_source=onsite&utm_medium=top_gnb&utm_campaign=shopdanawa'
+            }
+            className="hover:underline hover:text-black"
+          >
             몰테일
           </Link>
-          <Link href={'/'} className="hover:underline hover:text-black">
+          <Link
+            href={
+              'https://www.plto.com/?utm_source=shopdanawa&utm_medium=referral&utm_campaign=home&utm_content=top_gnb'
+            }
+            className="hover:underline hover:text-black"
+          >
             플레이오토
           </Link>
-          <Link href={'/'} className="hover:underline hover:text-black">
+          <Link
+            href={
+              'https://www.makeshop.co.kr/?utm_source=onsite&utm_medium=top_gnb&utm_campaign=shopdanawa'
+            }
+            className="hover:underline hover:text-black"
+          >
             메이크샵
           </Link>
         </div>
